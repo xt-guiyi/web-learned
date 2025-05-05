@@ -1,14 +1,14 @@
 /*
  * @Author: xt-guiyi 1661219752@qq.com
- * @Date: 2025-05-05 18:13:10
+ * @Date: 2025-05-05 20:18:41
  * @LastEditors: xt-guiyi 1661219752@qq.com
- * @LastEditTime: 2025-05-05 20:20:34
+ * @LastEditTime: 2025-05-05 20:26:42
  */
 import type { Metadata } from 'next'
 import { AntdRegistry } from '@ant-design/nextjs-registry'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { AppLayout } from '@/app/menu/menuLayout'
-import './globals.css'
+import { MenuLayout } from './menuLayout'
+import '@/app/globals.css'
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -32,7 +32,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='zh-CN'>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+				<AntdRegistry>
+					<MenuLayout>{children}</MenuLayout>
+				</AntdRegistry>
+			</body>
 		</html>
 	)
 }

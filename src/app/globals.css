@@ -24,3 +24,23 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #4096ff, 0 0 35px #4096ff, 0 0 40px #4096ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #4096ff, 0 0 70px #4096ff, 0 0 80px #4096ff;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #4096ff, 0 0 35px #4096ff, 0 0 40px #4096ff;
+  }
+}
+
+.glow-text {
+  animation: glow 2s ease-in-out infinite;
+}
