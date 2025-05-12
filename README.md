@@ -1,3 +1,7 @@
+别人写的wen3d项目，和3d资源获取教程
+
+https://juejin.cn/post/7498914140166799397?utm_source=post_share_card
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
